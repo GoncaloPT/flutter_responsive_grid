@@ -1,7 +1,5 @@
 library flutter_responsive_grid;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/grid/flutter_responsive_row.dart';
+export 'src/grid/grid_system.dart';
+export 'src/display/flutter_responsive_display.dart';
