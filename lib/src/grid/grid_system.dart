@@ -20,6 +20,11 @@ class GridSystemUtils {
     return col.sizes[current.index];
   }
 
+  static double findCurrentHeight(BuildContext context){
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+
+    return mediaQueryData.size.height;
+  }
   static ScreenSize findCurrentScreenSize(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     double width = mediaQueryData.size.width;

@@ -13,6 +13,7 @@ class FlutterResponsiveRow extends StatelessWidget {
     var rows = <Widget>[];
     var columns = <Widget>[];
     int availableRowColumns = utils.configuration.numberOfColumns;
+
     for (FlutterResponsiveCol responsiveCol in children) {
       _logger.warning("=============================================");
       int requiredColumns = utils.getRequiredColumnsOf(responsiveCol, context);
@@ -34,6 +35,7 @@ class FlutterResponsiveRow extends StatelessWidget {
           ));
         }
         rows.add(Row(
+
           children: columns,
         ));
         columns = <Widget>[];
@@ -52,13 +54,12 @@ class FlutterResponsiveRow extends StatelessWidget {
         ));
       }
       rows.add(Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: columns,
       ));
     }
     _logger.warning("we have #${rows.length} rows");
 
-    return Column(children: rows);
+    return Column(children: rows,crossAxisAlignment: CrossAxisAlignment.stretch,);
   }
 }
 
@@ -74,7 +75,6 @@ class FlutterResponsiveCol extends StatelessWidget {
   final GridSystemConfiguration configuration;
   final sizes = <int>[];
 
-
   int requiredColumns;
 
   FlutterResponsiveCol(
@@ -85,6 +85,7 @@ class FlutterResponsiveCol extends StatelessWidget {
     int md,
     int lg,
     int xl,
+
   }) : assert(child != null) {
     if(xs == null){
       xs = -1;

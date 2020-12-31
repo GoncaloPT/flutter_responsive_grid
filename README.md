@@ -28,6 +28,7 @@ A FlutterResponsiveCol should be inside FlutterResponsiveRow
   
 - Display 
 
-**Display** widget allows to hide or show content based on the viewport size
+**Display** widget allows showing widgets based on the viewport size
+**Hidden** widget allows hiding widgets based on the viewport size
 
 - Spacing Utils

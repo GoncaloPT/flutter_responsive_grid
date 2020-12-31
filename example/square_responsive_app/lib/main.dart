@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_responsive_grid/flutter_responsive_grid.dart';
 import 'package:logging/logging.dart';
+import 'package:square_responsive_app/src/presentation/example_screen.dart';
 
 void main() {
   configureLogger();
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      //MultipleDeviceExample()
     );
   }
 }
@@ -93,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             xs: 12,
             sm: 6,
+
           ),
           FlutterResponsiveCol(
             Display(
@@ -180,7 +183,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               child: Center(
                 child: Text(
-                  'Nothing 1...',
+                  'Nothing defined, it will take the available space.',
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -193,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               child: Center(
                 child: Text(
-                  'Nothing 2...',
+                  'Nothing defined, it will take the available space.',
                 ),
               ),
             ),
@@ -223,6 +227,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(
                   'Nothing...',
                 ),
+              ),
+            ),
+          ),
+          FlutterResponsiveCol(
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.deepPurple,
+              ),
+              child: Center(
+                child: MaterialButton(child: Text("Example page"),)
               ),
             ),
           ),
